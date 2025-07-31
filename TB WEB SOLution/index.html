@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThinkBright Web Solutions - Professional Website & Mobile App Development</title>
+    <meta name="description" content="ThinkBright Web Solutions offers end-to-end website and mobile app development services. Custom design, SEO-friendly, responsive solutions for businesses and startups.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#7C3AED',
+                        'primary-dark': '#5B21B6',
+                        'secondary': '#3B82F6',
+                        'accent': '#10B981',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .float{
+ position:fixed;
+ width:60px;
+ height:60px;
+ bottom:100px;
+ left:40px;
+ background-color:#25d366;
+ color:#FFF;
+ border-radius:50px;
+ text-align:center;
+  font-size:30px;
+ box-shadow: 2px 2px 3px #999;
+ margin: 5px;
+}
+
+.my-float{
+ margin-top:15px;
+}
+    </style>
+    <script src="sheets.js"></script>
+</head>
+<body class="font-inter bg-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="index.html"><img src="logo.jpg" alt="ThinkBright Edtech Logo " class="h-12 mr-3" loading="lazy"></a>
+                    <a href="index.html"><span style="color: #5047dd; font-weight: bold; font-size:25px;">ThinkBright <span class="text-accent" style="color: #42b890;">Web Solutions</span></span></a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="nav-link text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="#services" class="nav-link text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</a>
+                        <a href="#pricing" class="nav-link text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Pricing</a>
+                        <a href="#portfolio" class="nav-link text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Portfolio</a>
+                        <a href="#about" class="nav-link text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                        <a href="#contact" class="bg-gradient-to-r from-primary to-secondary text-white px-6 py-2 rounded-lg font-medium hover:shadow-lg transition-all duration-300">Get Started</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="mobile-menu-button bg-gray-100 inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div class="mobile-menu hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
+                <a href="index.html" class="nav-link-mobile text-gray-900 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="#services" class="nav-link-mobile text-gray-600 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="#pricing" class="nav-link-mobile text-gray-600 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Pricing</a>
+                <a href="#portfolio" class="nav-link-mobile text-gray-600 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Portfolio</a>
+                <a href="#about" class="nav-link-mobile text-gray-600 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#contact" class="nav-link-mobile text-gray-600 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-16 bg-gradient-to-br from-indigo-50 via-white to-purple-50 min-h-screen flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in-up">
+                    <div class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-full text-primary font-medium text-sm mb-6">
+                        <i class="fas fa-rocket mr-2"></i>
+                        Professional Web Solutions
+                    </div>
+                    <h1 class="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
+                        Build Your Digital
+                        <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                            Success Story
+                        </span>
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                        ThinkBright Web Solutions delivers end-to-end website and mobile app development services. 
+                        Create modern, responsive, and high-performance digital solutions that make your brand stand out online.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="cta-button bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 text-center">
+                            Start Your Project
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="#portfolio" class="border border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-all duration-300 text-center">
+                            View Our Work
+                        </a>
+                    </div>
+                    
+                    <!-- Stats -->
+                    <div class="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-200">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-gray-900">150+</div>
+                            <div class="text-gray-600">Projects Completed</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-gray-900">98%</div>
+                            <div class="text-gray-600">Client Satisfaction</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-gray-900">24/7</div>
+                            <div class="text-gray-600">Support Available</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Contact Form -->
+                <div>
+                    <form id="contactForm" class="bg-white/10 backdrop-blur-sm rounded-2xl p-8" style="background-color:rgb(102, 102, 253); color: white;">
+                        <div class=>
+                            <div class="mb-6">
+                                <label for="email" class="block text-sm font-medium text-gray-300 mb-2" style="color: white; font-size: large;">Full Name</label>
+                                <input type="email" id="email" name="email" required
+                                       class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-2" style="color: white; font-size: large;">Email Address</label>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="phone" class="block text-sm font-medium text-gray-300 mb-2" style="color: white; font-size: large;">Phone Number</label>
+                            <input type="tel" id="phone" name="phone"
+                                   class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="service" class="block text-sm font-medium text-gray-300 mb-2"style="color: white; font-size: large;">Service Interested In</label>
+                            <select id="service" name="service" required
+                                    class="w-full px-4 py-3 bg-white border border-white/30 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                                <option value="">Select a service</option>
+                                <option value="website">Website Development</option>
+                                <option value="mobile">Mobile App Development</option>
+                                <option value="ecommerce">E-commerce Solution</option>
+                                <option value="design">UI/UX Design</option>
+                                <option value="hosting">Hosting & Support</option>
+                                <option value="marketing">Digital Marketing</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" 
+                                class="w-full bg-gradient-to-r from-primary to-secondary text-white py-4 rounded-lg font-semibold hover:shadow-xl transition-all duration-300">
+                            Get a Quote
+                            <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                        
+                        <div id="formMessage" class="mt-4 text-center hidden"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+     <!-- Pricing Section -->
+     <section id="pricing" class="py-20 bg-gradient-to-br from-gray-50 to-indigo-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Choose Your Perfect Plan</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Transparent pricing with no hidden fees. Get started with a plan that fits your needs.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Starter Plan -->
+                <div class="pricing-card bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 fade-in-up">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Starter</h3>
+                        <p class="text-gray-600 mb-6">Perfect for small businesses</p>
+                        <div class="text-4xl font-bold text-gray-900">
+                            ₹ 11,999
+                            <span class="text-lg text-gray-600 font-normal">/project</span>
+                        </div>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-accent mr-3"></i>
+                            Free Domain for 1 year
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-accent mr-3"></i>
+                           5 Business E-mails
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-accent mr-3"></i>
+                            Free 1 year hosting 
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-accent mr-3"></i>
+                           Free SSL certificate
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-accent mr-3"></i>
+                            UP TO -page responsive website
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-accent mr-3"></i>
+                            Mobile-friendly design
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-accent mr-3"></i>
+                            Starter SEO optimization
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-accent mr-3"></i>
+                            Contact form integration
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-accent mr-3"></i>
+                           Social Media Integration
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-accent mr-3"></i>
+                          Delivery in 5 days
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-accent mr-3"></i>
+                           2 Revisions/ Corrections 
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-accent mr-3"></i>
+                            30-day support
+                        </li>
+                    </ul>
+                    
+                     <!-- Get Started Button -->
+  <button onclick="openForm()" 
+  class="w-full bg-[#1b1f38] text-white px-6 py-3 rounded-lg shadow-md hover:bg-[#2a3054] transition">
+  Get Started
+</button>
+</div>
+<!-- Overlay Modal -->
+<div id="contactModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="bg-white rounded-xl shadow-lg w-full max-w-md p-6 relative">
+  
+      <!-- Close Button -->
+      <button onclick="closeForm()" 
+        class="absolute top-3 right-4 text-gray-500 hover:text-red-600 text-2xl font-bold">
+        &times;
+      </button>
+  
+      <!-- Contact Form -->
+      <h2 class="text-2xl font-semibold mb-4 text-gray-800 text-center">Contact Us</h2>
+      <form method="post" action="https://script.google.com/macros/s/AKfycbxUPr77PuW4IRYGVwJrm2onVqO6qlyi99YJ05FUFQ8CZtiAunFYxDkwEg5v9O3TQQ0-/exec" name="contact-form">
+        <div>
+            <div class="mb-6">
+                <label for="Name" class="block text-sm font-medium text-gray-300 mb-2" style="color:black;">Full Name</label>
+                <input type="text" id="name" name="name" required
+                       class="w-full px-4 py-3 bg-white/20 border  rounded-lg text-black placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+            </div>
+        </div>
+        
+        <div class="mb-6">
+            <label for="email" class="block text-sm font-medium text-gray-300 mb-2" style="color:black;">Email Address</label>
+            <input type="email" id="email" name="email" required
+                   class="w-full px-4 py-3 bg-white/20 border  rounded-lg text-black placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+        </div>
+        
+        <div class="mb-6">
+            <label for="phone" class="block text-sm font-medium text-gray-300 mb-2" style="color:black;">Phone Number</label>
+            <input type="tel" id="phone" name="phone"
+                   class="w-full px-4 py-3 bg-white/20 border rounded-lg text-black placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+        </div>
+          <div class="mb-6">
+            <label for="service" class="block text-sm font-medium text-gray-300 mb-2"style="color: white; font-size: large;">Service Interested In</label>
+            <select id="service" name="service" required
+                    class="w-full px-4 py-3 bg-white border border-ring-blue-500 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                <option value="">Select a service</option>
+                <option value="website">Website Development</option>
+                <option value="mobile">Mobile App Development</option>
+                <option value="ecommerce">E-commerce Solution</option>
+                <option value="design">UI/UX Design</option>
+                <option value="hosting">Hosting & Support</option>
+                <option value="marketing">Digital Marketing</option>
+            </select>
+        </div>
+          <button type="submit"
+          class="flex items-center justify-center gap-2 w-full md:w-auto px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 text-white font-semibold rounded-md shadow-lg transition duration-300">
+          <span>Send Message</span>
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+</div>
+                
+                <!-- Premium Plan -->
+                <div class="pricing-card bg-gradient-to-br from-primary to-secondary text-white rounded-2xl p-8 shadow-xl border-2 border-primary transform scale-105 hover:shadow-2xl transition-all duration-300 fade-in-up delay-100">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-accent text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
+                    </div>
+                    
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold mb-2">Premium</h3>
+                        <p class="text-purple-100 mb-6">Best for growing businesses</p>
+                        <div class="text-4xl font-bold">
+                            ₹ 21,999
+                            <span class="text-lg text-purple-200 font-normal">/project</span>
+                        </div>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-3"></i>
+                          Everything in starter plan plus
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-3"></i>
+                           Up to 15 custom-designed pages
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-3"></i>
+                            Advanced SEO optimization
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-3"></i>
+                           Google Analytics & Meta Pixel Integration
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-3"></i>
+                            90-day support
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-3"></i>
+                           E-mail marketing 
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-3"></i>
+                           Lead Generation forms 
+                        </li>
+                        
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-3"></i>
+                           Admin Dashboard/Control panel 
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-3"></i>
+                           1 year free maintanence
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-3"></i>
+                          Live Chat-bot Integration
+                        </li>
+                    </ul>
+                    
+                      <!-- Get Started Button -->
+  <button onclick="openForm()" 
+  class="w-full bg-[#1b1f38] text-white px-6 py-3 rounded-lg shadow-md hover:bg-[#2a3054] transition">
+  Get Started
+</button>
+</div>
+<!-- Overlay Modal -->
+<div id="contactModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="bg-white rounded-xl shadow-lg w-full max-w-md p-6 relative">
+  
+      <!-- Close Button -->
+      <button onclick="closeForm()" 
+        class="absolute top-3 right-4 text-gray-500 hover:text-red-600 text-2xl font-bold">
+        &times;
+      </button>
+  
+      <!-- Contact Form -->
+      <h2 class="text-2xl font-semibold mb-4 text-gray-800 text-center">Contact Us</h2>
+      <form onsubmit="">
+        <div class=>
+            <div class="mb-6">
+                <label for="email" class="block text-sm font-medium text-gray-300 mb-2" style="color:black;">Full Name</label>
+                <input type="email" id="email" name="email" required
+                       class="w-full px-4 py-3 bg-white/20 border  rounded-lg text-black placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+            </div>
+        </div>
+        
+        <div class="mb-6">
+            <label for="email" class="block text-sm font-medium text-gray-300 mb-2" style="color:black;">Email Address</label>
+            <input type="email" id="email" name="email" required
+                   class="w-full px-4 py-3 bg-white/20 border  rounded-lg text-black placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+        </div>
+        
+        <div class="mb-6">
+            <label for="phone" class="block text-sm font-medium text-gray-300 mb-2" style="color:black;">Phone Number</label>
+            <input type="tel" id="phone" name="phone"
+                   class="w-full px-4 py-3 bg-white/20 border rounded-lg text-black placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+        </div>
+          <div class="mb-6">
+            <label for="service" class="block text-sm font-medium text-gray-300 mb-2"style="color: white; font-size: large;">Service Interested In</label>
+            <select id="service" name="service" required
+                    class="w-full px-4 py-3 bg-white border border-ring-blue-500 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                <option value="">Select a service</option>
+                <option value="website">Website Development</option>
+                <option value="mobile">Mobile App Development</option>
+                <option value="ecommerce">E-commerce Solution</option>
+                <option value="design">UI/UX Design</option>
+                <option value="hosting">Hosting & Support</option>
+                <option value="marketing">Digital Marketing</option>
+            </select>
+        </div>
+          <button type="submit"
+          class="flex items-center justify-center gap-2 w-full md:w-auto px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 text-white font-semibold rounded-md shadow-lg transition duration-300">
+          <span>Send Message</span>
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+                
+                <!-- Enterprise Plan -->
+                <div class="pricing-card bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 fade-in-up delay-200">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Enterprise</h3>
+                        <p class="text-gray-600 mb-6">For large-scale projects</p>
+                        <div class="text-4xl font-bold text-gray-900">
+                            Custom
+                            <span class="text-lg text-gray-600 font-normal">/quote</span>
+                        </div>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-3"></i>
+                        Everything in premium plan
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-accent mr-3"></i>
+                           Dedicated IP address
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-accent mr-3"></i>
+                            Free cPanel/WHM
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-accent mr-3"></i>
+                            Account Management tools
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-accent mr-3"></i>
+                           Upto 30 Business e-mails
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-accent mr-3"></i>
+                            Unlimited pages
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-accent mr-3"></i>
+                            Custom web application
+                        </li>
+        
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-accent mr-3"></i>
+                            Advanced Ai integration 
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-accent mr-3"></i>
+                           Free billing software for 1 year
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-accent mr-3"></i>
+                            Priority development
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-accent mr-3"></i>
+                           24/7 Help desk support
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-accent mr-3"></i>
+                            And Much More
+                        </li>
+                    </ul>
+                    
+                      <!-- Get Started Button -->
+  <button onclick="openForm()" 
+  class="w-full bg-[#1b1f38] text-white px-6 py-3 rounded-lg shadow-md hover:bg-[#2a3054] transition">
+  Get Started
+</button>
+</div>
+<!-- Overlay Modal -->
+<div id="contactModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="bg-white rounded-xl shadow-lg w-full max-w-md p-6 relative">
+  
+      <!-- Close Button -->
+      <button onclick="closeForm()" 
+        class="absolute top-3 right-4 text-gray-500 hover:text-red-600 text-2xl font-bold">
+        &times;
+      </button>
+  
+      <!-- Contact Form -->
+      <h2 class="text-2xl font-semibold mb-4 text-gray-800 text-center">Contact Us</h2>
+      <form style="height: 500px;" >
+        <div class=>
+            <div class="mb-6">
+                <label for="email" class="block text-sm font-medium text-gray-300 mb-2" style="color:black;">Full Name</label>
+                <input type="email" id="email" name="email" required
+                       class="w-full px-4 py-3 bg-white/20 border  rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+            </div>
+        </div>
+        
+        <div class="mb-6">
+            <label for="email" class="block text-sm font-medium text-gray-300 mb-2" style="color:black;">Email Address</label>
+            <input type="email" id="email" name="email" required
+                   class="w-full px-4 py-3 bg-white/20 border  rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+        </div>
+        
+        <div class="mb-6">
+            <label for="phone" class="block text-sm font-medium text-gray-300 mb-2" style="color:black;">Phone Number</label>
+            <input type="tel" id="phone" name="phone"
+                   class="w-full px-4 py-3 bg-white/20 border rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+        </div>
+          <div class="mb-6">
+            <label for="service" class="block text-sm font-medium text-gray-300 mb-2"style="color: white; font-size: large;">Service Interested In</label>
+            <select id="service" name="service" required
+                    class="w-full px-4 py-3 bg-white border border-ring-blue-500 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                <option value="">Select a service</option>
+                <option value="website">Website Development</option>
+                <option value="mobile">Mobile App Development</option>
+                <option value="ecommerce">E-commerce Solution</option>
+                <option value="design">UI/UX Design</option>
+                <option value="hosting">Hosting & Support</option>
+                <option value="marketing">Digital Marketing</option>
+            </select>
+        </div>
+          <button type="submit"
+          class="flex items-center justify-center gap-2 w-full md:w-auto px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 text-white font-semibold rounded-md shadow-lg transition duration-300">
+          <span>Send Message</span>
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We offer comprehensive digital solutions to help your business thrive online
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="service-card bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 fade-in-up">
+                    <div class="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-code text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Custom Website Development</h3>
+                    <p class="text-gray-600 mb-6">
+                        Professional, responsive websites built with modern technologies. From simple business sites to complex web applications.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Responsive Design</li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> SEO Optimized</li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Fast Loading</li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Security Focused</li>
+                    </ul>
+                    <br>
+                    <a href="custom.html" class="cta-button bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 text-center">
+                        View Details
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="service-card bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 fade-in-up delay-100">
+                    <div class="w-16 h-16 bg-gradient-to-r from-secondary to-accent rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-mobile-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Mobile App Development</h3>
+                    <p class="text-gray-600 mb-6">
+                        Native and cross-platform mobile applications for iOS and Android that deliver exceptional user experiences.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> iOS & Android</li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Cross-Platform</li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> App Store Publishing</li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Maintenance Support</li>
+                    </ul>
+                    <br>
+                    <br>
+                    <br>
+                    <a href="app.html" class="cta-button bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 text-center">
+                        View Details
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="service-card bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 fade-in-up delay-200">
+                    <div class="w-16 h-16 bg-gradient-to-r from-accent to-primary rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-shopping-cart text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">E-commerce Solutions</h3>
+                    <p class="text-gray-600 mb-6">
+                        Complete online stores with payment integration, inventory management, and customer analytics.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Payment Gateway</li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Inventory Management</li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Order Tracking</li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Analytics Dashboard</li>
+                    </ul>
+                    <br>
+                    <br>
+                    <br>
+                    <a href="e-commerce.html" class="cta-button bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 text-center">
+                        View Details
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service Card 4 -->
+                <div class="service-card bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 fade-in-up delay-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-paint-brush text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">UI/UX Design</h3>
+                    <p class="text-gray-600 mb-6">
+                        User-centered design that creates intuitive and engaging experiences for your customers.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> User Research</li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Wireframing</li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Prototyping</li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Testing & Iteration</li>
+                    </ul>
+                    <br>
+                    <a href="uiux.html" class="cta-button bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 text-center">
+                        View Details
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service Card 5 -->
+                <div class="service-card bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 fade-in-up delay-400">
+                    <div class="w-16 h-16 bg-gradient-to-r from-secondary to-accent rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-server text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Hosting & Support</h3>
+                    <p class="text-gray-600 mb-6">
+                        Reliable hosting solutions with ongoing maintenance, updates, and dedicated support.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Domain Setup</li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> SSL Certificates</li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Regular Backups</li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> 24/7 Monitoring</li>
+                    </ul>
+                    <br>
+                    <a href="host.html" class="cta-button bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 text-center">
+                        View Details
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service Card 6 -->
+                <div class="service-card bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 fade-in-up delay-500">
+                    <div class="w-16 h-16 bg-gradient-to-r from-accent to-primary rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Digital Marketing</h3>
+                    <p class="text-gray-600 mb-6">
+                        SEO optimization, social media integration, and analytics to boost your online presence.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> SEO Optimization</li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Social Media</li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Analytics Setup</li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Performance Reports</li>
+                    </ul>
+                    <br>
+                    <a href="marketing.html" class="cta-button bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 text-center">
+                        View Details
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Recent Work</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Take a look at some of our latest projects and see how we've helped businesses succeed online
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 fade-in-up">
+                    <div class="relative overflow-hidden">
+                        <img src="photo_2025-07-25_19-20-04.jpg" 
+                             alt="Website design mockup" 
+                             class="w-full h-48 object-cover transform hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <div class="p-6 text-white">
+                                <h4 class="font-semibold">E-commerce Platform</h4>
+                                <p class="text-sm opacity-90">Modern online store</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">TechStore Online</h3>
+                        <p class="text-gray-600 mb-4">Complete e-commerce solution with inventory management and payment integration.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">E-commerce</span>
+                            <span class="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">React</span>
+                            <span class="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full">Payment Gateway</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 fade-in-up delay-100">
+                    <div class="relative overflow-hidden">
+                        <img src="photo_2025-07-25_20-09-13.jpg" 
+                             alt="Website design mockup" 
+                             class="w-full h-48 object-cover transform hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <div class="p-6 text-white">
+                                <h4 class="font-semibold">Business Website</h4>
+                                <p class="text-sm opacity-90">Professional corporate site</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Corporate Solutions</h3>
+                        <p class="text-gray-600 mb-4">Professional business website with custom CMS and client portal.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Business</span>
+                            <span class="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">WordPress</span>
+                            <span class="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full">Custom CMS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 fade-in-up delay-200">
+                    <div class="relative overflow-hidden">
+                        <img src="fittracker.jpg" 
+                             alt="Mobile app development" 
+                             class="w-full h-48 object-cover transform hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <div class="p-6 text-white">
+                                <h4 class="font-semibold">Mobile App</h4>
+                                <p class="text-sm opacity-90">iOS & Android application</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">FitTracker App</h3>
+                        <p class="text-gray-600 mb-4">Cross-platform mobile app for fitness tracking with social features.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Mobile App</span>
+                            <span class="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">React Native</span>
+                            <span class="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full">Fitness</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 4 -->
+                <div class="portfolio-item bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 fade-in-up delay-300">
+                    <div class="relative overflow-hidden">
+                        <img src="portfolio.jpg" 
+                             alt="Website design mockup" 
+                             class="w-full h-48 object-cover transform hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <div class="p-6 text-white">
+                                <h4 class="font-semibold">Portfolio Website</h4>
+                                <p class="text-sm opacity-90">Creative professional showcase</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Creative Portfolio</h3>
+                        <p class="text-gray-600 mb-4">Stunning portfolio website for a creative agency with interactive galleries.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Portfolio</span>
+                            <span class="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Vue.js</span>
+                            <span class="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full">Creative</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 5 -->
+                <div class="portfolio-item bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 fade-in-up delay-400">
+                    <div class="relative overflow-hidden">
+                        <img src="cloud.jpg" 
+                             alt="Website design mockup" 
+                             class="w-full h-48 object-cover transform hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <div class="p-6 text-white">
+                                <h4 class="font-semibold">SaaS Platform</h4>
+                                <p class="text-sm opacity-90">Cloud-based software solution</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">CloudManager Pro</h3>
+                        <p class="text-gray-600 mb-4">SaaS platform for project management with real-time collaboration features.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">SaaS</span>
+                            <span class="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Node.js</span>
+                            <span class="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full">Enterprise</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 6 -->
+                <div class="portfolio-item bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 fade-in-up delay-500">
+                    <div class="relative overflow-hidden">
+                        <img src="foodie.jpg" 
+                             alt="Mobile app development" 
+                             class="w-full h-48 object-cover transform hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <div class="p-6 text-white">
+                                <h4 class="font-semibold">Restaurant App</h4>
+                                <p class="text-sm opacity-90">Food delivery platform</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">FoodieDelivery</h3>
+                        <p class="text-gray-600 mb-4">Complete food delivery platform with restaurant management and order tracking.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Delivery App</span>
+                            <span class="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Flutter</span>
+                            <span class="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full">Food & Beverage</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-4xl font-bold mb-4">What Our Clients Say</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Don't just take our word for it. Here's what our satisfied clients have to say about working with us.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 fade-in-up">
+                    <div class="flex items-center mb-6">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-200 mb-6 text-lg leading-relaxed">
+                        "ThinkBright delivered exactly what we needed. Their team understood our requirements perfectly and created a website that exceeded our expectations."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            SR
+                        </div>
+                        <div>
+                            <div class="font-semibold">Saranraj</div>
+                            <div class="text-gray-400">CEO, Spark EDtech.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 fade-in-up delay-100">
+                    <div class="flex items-center mb-6">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-200 mb-6 text-lg leading-relaxed">
+                        "Professional, reliable, and innovative. The mobile app they developed for us has significantly improved our customer engagement."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-to-r from-secondary to-accent rounded-full flex items-center justify-center text-white font-bold mr-4">
+                        DL
+                        </div>
+                        <div>
+                            <div class="font-semibold">Dhanalakshmi</div>
+                            <div class="text-gray-400">Founder, FitLife Studios</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 fade-in-up delay-200">
+                    <div class="flex items-center mb-6">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-200 mb-6 text-lg leading-relaxed">
+                        "Outstanding support and attention to detail. They transformed our online presence and helped us reach new customers effectively."
+                    </p>
+                    <br>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-to-r from-accent to-primary rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            SP
+                        </div>
+                        <div>
+                            <div class="font-semibold">Surya Prakash</div>
+                            <div class="text-gray-400">Director, Creative Agency</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="fade-in-up">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">About ThinkBright</h2>
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                        We are a passionate team of developers, designers, and digital strategists dedicated to helping businesses succeed online. With years of experience and a commitment to excellence, we turn ideas into powerful digital solutions.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-lightbulb text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-2">Innovation First</h3>
+                                <p class="text-gray-600">We stay ahead of technology trends to deliver cutting-edge solutions that give you a competitive advantage.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-gradient-to-r from-secondary to-accent rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-users text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-2">Client-Focused</h3>
+                                <p class="text-gray-600">Your success is our priority. We work closely with you throughout the entire development process.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-gradient-to-r from-accent to-primary rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-shield-alt text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-2">Quality Assured</h3>
+                                <p class="text-gray-600">Every project undergoes rigorous testing to ensure optimal performance, security, and user experience.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fade-in-up delay-200">
+                    <div class="grid grid-cols-2 gap-6">
+                        <img src="work space.jpg" 
+                             alt="Modern office workspace" 
+                             class="rounded-2xl shadow-lg">
+                        <img src="meeting.jpg" 
+                             alt="Professional business meeting" 
+                             class="rounded-2xl shadow-lg mt-8">
+                        <img src="app development.jpg" 
+                             alt="Mobile app development" 
+                             class="rounded-2xl shadow-lg -mt-8">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+                <p class="text-xl text-gray-600">
+                    Get answers to common questions about our services and process
+                </p>
+            </div>
+            
+            <div class="space-y-6">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item bg-white rounded-2xl shadow-lg border border-gray-200 fade-in-up">
+                    <button class="faq-question w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 rounded-2xl transition-colors">
+                        <span class="text-xl font-semibold text-gray-900">How long does it take to build a website?</span>
+                        <i class="fas fa-chevron-down text-gray-600 transform transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden px-8 pb-6">
+                        <p class="text-gray-600 leading-relaxed">
+                            The timeline depends on the complexity of your project. A simple business website typically takes 5-10 days, 
+                            while more complex e-commerce or custom web applications can take 6-12 weeks. We'll provide you with a detailed 
+                            timeline during our initial consultation.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="faq-item bg-white rounded-2xl shadow-lg border border-gray-200 fade-in-up delay-100">
+                    <button class="faq-question w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 rounded-2xl transition-colors">
+                        <span class="text-xl font-semibold text-gray-900">Do you provide ongoing support and maintenance?</span>
+                        <i class="fas fa-chevron-down text-gray-600 transform transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden px-8 pb-6">
+                        <p class="text-gray-600 leading-relaxed">
+                            Yes! We offer comprehensive support and maintenance packages. All our projects include initial support 
+                            (30-90 days depending on the plan), and we offer ongoing maintenance contracts for long-term support, 
+                            updates, and security monitoring.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="faq-item bg-white rounded-2xl shadow-lg border border-gray-200 fade-in-up delay-200">
+                    <button class="faq-question w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 rounded-2xl transition-colors">
+                        <span class="text-xl font-semibold text-gray-900">Can you help with mobile app development?</span>
+                        <i class="fas fa-chevron-down text-gray-600 transform transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden px-8 pb-6">
+                        <p class="text-gray-600 leading-relaxed">
+                            Absolutely! We specialize in both native (iOS/Android) and cross-platform mobile app development. 
+                            We can help you determine the best approach based on your budget, timeline, and feature requirements, 
+                            and handle everything from design to app store submission.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="faq-item bg-white rounded-2xl shadow-lg border border-gray-200 fade-in-up delay-300">
+                    <button class="faq-question w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 rounded-2xl transition-colors">
+                        <span class="text-xl font-semibold text-gray-900">What technologies do you use?</span>
+                        <i class="fas fa-chevron-down text-gray-600 transform transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden px-8 pb-6">
+                        <p class="text-gray-600 leading-relaxed">
+                            We use modern, industry-standard technologies including React, Vue.js, Node.js, Python, PHP, 
+                            React Native, Flutter, and more. We choose the best technology stack based on your specific 
+                            needs, scalability requirements, and budget considerations.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="faq-item bg-white rounded-2xl shadow-lg border border-gray-200 fade-in-up delay-400">
+                    <button class="faq-question w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 rounded-2xl transition-colors">
+                        <span class="text-xl font-semibold text-gray-900">Do you offer hosting and domain services?</span>
+                        <i class="fas fa-chevron-down text-gray-600 transform transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden px-8 pb-6">
+                        <p class="text-gray-600 leading-relaxed">
+                            Yes, we can help you with domain registration and hosting setup. We work with reliable hosting 
+                            providers and can recommend the best solution based on your website's requirements. We also 
+                            provide migration services if you're moving from another host.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <!-- Contact Info -->
+                <div class="fade-in-up">
+                    <h2 class="text-4xl font-bold mb-6">Let's Start Your Project</h2>
+                    <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                        Ready to take your business online? Get in touch with us today for a free consultation and project quote.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-white"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Email Us</div>
+                                <div class="text-gray-300">info@thinkbrightedu.in</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-gradient-to-r from-secondary to-accent rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-phone text-white"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Call Us</div>
+                                <div class="text-gray-300">+917845239889</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-gradient-to-r from-accent to-primary rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt text-white"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Visit Us</div>
+                                <div class="text-gray-300">No 10/9, M.P.S.Salai
+                                    Above Indian Overseas Bank,Tiruttani - 631209
+                                    India</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Links -->
+                    <div class="flex space-x-4 mt-8">
+                        <a href="#" class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors">
+                            <i class="fab fa-facebook-f text-white"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors">
+                            <i class="fab fa-twitter text-white"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors">
+                            <i class="fab fa-linkedin-in text-white"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="fade-in-up delay-200">
+                    <form id="contactForm" class="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+                        <div class="grid md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="firstName" class="block text-sm font-medium text-gray-300 mb-2">First Name</label>
+                                <input type="text" id="firstName" name="firstName" required
+                                       class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            </div>
+                            <div>
+                                <label for="lastName" class="block text-sm font-medium text-gray-300 mb-2">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" required
+                                       class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="phone" class="block text-sm font-medium text-gray-300 mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="phone"
+                                   class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="service" class="block text-sm font-medium text-gray-300 mb-2">Service Interested In</label>
+                            <select id="service" name="service" required
+                                    class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                                <option value="">Select a service</option>
+                                <option value="website">Website Development</option>
+                                <option value="mobile">Mobile App Development</option>
+                                <option value="ecommerce">E-commerce Solution</option>
+                                <option value="design">UI/UX Design</option>
+                                <option value="hosting">Hosting & Support</option>
+                                <option value="marketing">Digital Marketing</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Project Details</label>
+                            <textarea id="message" name="message" rows="4" required
+                                      class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                      placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        
+                        <button type="submit" 
+                                class="w-full bg-gradient-to-r from-primary to-secondary text-white py-4 rounded-lg font-semibold hover:shadow-xl transition-all duration-300">
+                            Send Message
+                            <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                        
+                        <div id="formMessage" class="mt-4 text-center hidden"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-4">
+                        ThinkBright <span style="color: white;">Web Solutions</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Transforming ideas into powerful digital solutions. We help businesses establish a strong online presence 
+                        through innovative website and mobile app development services.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#pricing" class="text-gray-400 hover:text-white transition-colors">Pricing</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-white transition-colors">Portfolio</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Website Development</a></li>
+                        <li><a href="app.html" class="text-gray-400 hover:text-white transition-colors">Mobile Apps</a></li>
+                        <li><a href="e-commerce.html" class="text-gray-400 hover:text-white transition-colors">E-commerce</a></li>
+                        <li><a href="uiux.html" class="text-gray-400 hover:text-white transition-colors">UI/UX Design</a></li>
+                        <li><a href="host.html" class="text-gray-400 hover:text-white transition-colors">Hosting & Support</a></li>
+                        <li><a href="marketing.html" class="text-gray-400 hover:text-white transition-colors">Digital Marketing</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-gray-400">
+                        &copy; 2025 ThinkBright Web Solutions. All rights reserved.
+                    </div>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function openForm() {
+          document.getElementById("contactModal").classList.remove("hidden");
+          document.getElementById("contactModal").classList.add("flex");
+        }
+    
+        function closeForm() {
+          document.getElementById("contactModal").classList.remove("flex");
+          document.getElementById("contactModal").classList.add("hidden");
+        }
+      </script>
+    <!-- whatsapp -->
+    <a href="https://wa.me/+917845239889" class="float" target="_blank">
+        <i class="fab fa-whatsapp my-float"></i>
+        </a>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+</html>

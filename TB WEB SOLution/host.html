@@ -1,0 +1,1031 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hosting & Support - ThinkBright Digital Agency</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            'inter': ['Inter', 'sans-serif'],
+                        },
+                        colors: {
+                            'primary': '#7C3AED',
+                            'primary-dark': '#5B21B6',
+                            'secondary': '#3B82F6',
+                            'accent': '#10B981',
+                        }
+                    }
+                }
+            }
+        </script>
+        <style>
+            .float{
+     position:fixed;
+     width:60px;
+     height:60px;
+     bottom:40px;
+     left:40px;
+     background-color:#25d366;
+     color:#FFF;
+     border-radius:50px;
+     text-align:center;
+      font-size:30px;
+     box-shadow: 2px 2px 3px #999;
+      z-index:100;
+    }
+    
+    .my-float{
+     margin-top:16px;
+    }
+        </style>
+    <style>
+        /* CSS Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #007bff;
+            --primary-dark: #0056b3;
+            --text-dark: #333;
+            --text-light: #666;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.15);
+            --border-radius: 12px;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            scroll-behavior: smooth;
+        }
+
+
+
+        /* Section Styles */
+        section {
+            padding: 4rem 0;
+        }
+
+        section:nth-child(even) {
+            background: var(--bg-light);
+        }
+
+        section:nth-child(odd) {
+            background: var(--white);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 8rem 0 4rem;
+            background: linear-gradient(135deg, var(--white) 0%, var(--bg-light) 100%);
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .hero-image {
+            text-align: center;
+        }
+
+        .hero-illustration {
+            width: 100%;
+            max-width: 400px;
+            height: 300px;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 3rem;
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--primary-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* Section Headers */
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: var(--white);
+            font-size: 1.5rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+        }
+
+        /* Trust Section */
+        .trust-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .trust-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            flex-shrink: 0;
+        }
+
+        /* Workflow Timeline */
+        .workflow-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            position: relative;
+        }
+
+        .workflow-step {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 30px;
+            background: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+
+        /* Tech Stack */
+        .tech-stack {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .tech-item {
+            padding: 1.5rem;
+            background: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .tech-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .tech-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .author-info h4 {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .author-info p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Form Styles */
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e9ecef;
+            border-radius: var(--border-radius);
+            font-family: inherit;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+            display: none;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            text-align: center;
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        .final-cta h2 {
+            color: var(--white);
+        }
+
+        .final-cta p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .contact-options {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-option {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .contact-option:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .trust-list {
+                grid-template-columns: 1fr;
+            }
+
+            .workflow-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .tech-stack {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-options {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .contact-info {
+                display: none;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 6rem 0 3rem;
+            }
+
+            .hero-text h1 {
+                font-size: 1.75rem;
+            }
+
+            .tech-stack {
+                grid-template-columns: 1fr;
+            }
+
+            .form-container {
+                margin: 0 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+ <!-- Navigation -->
+ <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <a href="index.html"><img src="logo.jpg" alt="ThinkBright Edtech Logo " class="h-12 mr-3" loading="lazy"></a>
+                <a href="index.html"><span style="color: #5047dd; font-weight: bold; font-size:25px;">ThinkBright <span class="text-accent" style="color: #42b890;">Web Solutions</span></span></a>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:block">
+                <div class="ml-10 flex items-baseline space-x-4">
+                    <a href="index.html" class="nav-link text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                    <a href="index.html" class="nav-link text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</a>
+                    <a href="index.html" class="nav-link text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Pricing</a>
+                    <a href="index.html" class="nav-link text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Portfolio</a>
+                    <a href="index.html" class="nav-link text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                    <a href="index.html" class="bg-gradient-to-r from-primary to-secondary text-white px-6 py-2 rounded-lg font-medium hover:shadow-lg transition-all duration-300">Get Started</a>
+                </div>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <div class="md:hidden">
+                <button type="button" class="mobile-menu-button bg-gray-100 inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Mobile Navigation -->
+    <div class="mobile-menu hidden md:hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
+            <a href="index.html" class="nav-link-mobile text-gray-900 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Home</a>
+            <a href="index.html" class="nav-link-mobile text-gray-600 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Services</a>
+            <a href="index.html" class="nav-link-mobile text-gray-600 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Pricing</a>
+            <a href="index.html" class="nav-link-mobile text-gray-600 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Portfolio</a>
+            <a href="index.html" class="nav-link-mobile text-gray-600 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">About</a>
+            <a href="index.html" class="nav-link-mobile text-gray-600 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="pt-16 bg-gradient-to-br from-indigo-50 via-white to-purple-50 min-h-screen flex items-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="fade-in-up">
+                <h1 class="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
+                    Reliable Hosting & Ongoing Support
+                </h1>
+                <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                    We keep your website secure, fast, and always online — while you focus on your business
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="cta-button bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 text-center">
+                        Start Your Project
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="#portfolio" class="border border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-all duration-300 text-center">
+                        View Our Work
+                    </a>
+                </div>
+                
+                <!-- Stats -->
+                <div class="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-200">
+                    <div class="text-center">
+                        
+                    </div>
+                    <div class="text-center">
+                        
+                    </div>
+                    <div class="text-center">
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- Contact Form -->
+            <div>
+                <form id="contactForm" class="bg-white/10 backdrop-blur-sm rounded-2xl p-8" style="background-color:rgb(102, 102, 253); color: white;">
+                    <div class=>
+                        <div class="mb-6">
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-2" style="color: white; font-size: large;">Full Name</label>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="email" class="block text-sm font-medium text-gray-300 mb-2" style="color: white; font-size: large;">Email Address</label>
+                        <input type="email" id="email" name="email" required
+                               class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="phone" class="block text-sm font-medium text-gray-300 mb-2" style="color: white; font-size: large;">Phone Number</label>
+                        <input type="tel" id="phone" name="phone"
+                               class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="service" class="block text-sm font-medium text-gray-300 mb-2"style="color: white; font-size: large;">Service Interested In</label>
+                        <select id="service" name="service" required
+                                class="w-full px-4 py-3 bg-white border border-white/30 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            <option value="">Select a service</option>
+                            <option value="website">Website Development</option>
+                            <option value="mobile">Mobile App Development</option>
+                            <option value="ecommerce">E-commerce Solution</option>
+                            <option value="design">UI/UX Design</option>
+                            <option value="hosting">Hosting & Support</option>
+                            <option value="marketing">Digital Marketing</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" 
+                            class="w-full bg-gradient-to-r from-primary to-secondary text-white py-4 rounded-lg font-semibold hover:shadow-xl transition-all duration-300">
+                        Get a Quote
+                        <i class="fas fa-paper-plane ml-2"></i>
+                    </button>
+                    
+                    <div id="formMessage" class="mt-4 text-center hidden"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+    <!-- What's Included Section -->
+    <section id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>What's Included in Our Hosting</h2>
+                <p>Everything you need for a fast, secure, and reliable web presence</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>Fast SSD Hosting</h3>
+                    <p>Lightning-fast SSD storage ensures your website loads quickly and performs optimally.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Domain & SSL Setup</h3>
+                    <p>Complete domain configuration and SSL certificate installation for secure connections.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Weekly Backups</h3>
+                    <p>Automated weekly backups ensure your data is always safe and recoverable.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>24/7 Monitoring</h3>
+                    <p>Round-the-clock monitoring to detect and resolve issues before they impact your site.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Server Maintenance</h3>
+                    <p>Regular server updates and maintenance to keep your hosting environment secure.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Performance Optimization</h3>
+                    <p>Continuous optimization to ensure your website runs at peak performance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Trust ThinkBright Section -->
+    <section id="trust">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Trust ThinkBright</h2>
+                <p>Our commitment to excellence and reliability sets us apart</p>
+            </div>
+            <div class="trust-list">
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div>
+                        <h3>99.9% Uptime Guarantee</h3>
+                        <p>We guarantee your website will be online and accessible 99.9% of the time.</p>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div>
+                        <h3>Managed Hosting Solutions</h3>
+                        <p>Fully managed hosting with no technical hassles for you to worry about.</p>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div>
+                        <h3>Free Website Migrations</h3>
+                        <p>We'll migrate your existing website to our servers at no additional cost.</p>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div>
+                        <h3>One-Click Restore</h3>
+                        <p>Easy one-click backup restoration whenever you need it.</p>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div>
+                        <h3>Active Security Monitoring</h3>
+                        <p>Proactive security monitoring and threat protection for your website.</p>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div>
+                        <h3>Expert Support Team</h3>
+                        <p>Dedicated support from experienced hosting professionals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hosting Workflow Section -->
+    <section id="workflow">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Hosting Workflow</h2>
+                <p>A systematic approach to getting your website hosted and optimized</p>
+            </div>
+            <div class="workflow-steps">
+                <div class="workflow-step">
+                    <div class="step-number">1</div>
+                    <h3>Requirement Analysis</h3>
+                    <p>We analyze your website's specific needs and traffic requirements to recommend the best hosting solution.</p>
+                </div>
+                <div class="workflow-step">
+                    <div class="step-number">2</div>
+                    <h3>Server Setup & DNS Configuration</h3>
+                    <p>We set up your server environment and configure DNS settings for optimal performance.</p>
+                </div>
+                <div class="workflow-step">
+                    <div class="step-number">3</div>
+                    <h3>Migration & Optimization</h3>
+                    <p>Careful migration of your website with performance optimizations and compatibility checks.</p>
+                </div>
+                <div class="workflow-step">
+                    <div class="step-number">4</div>
+                    <h3>Security Setup</h3>
+                    <p>Implementation of SSL certificates, firewalls, and security monitoring systems.</p>
+                </div>
+                <div class="workflow-step">
+                    <div class="step-number">5</div>
+                    <h3>Performance Testing</h3>
+                    <p>Comprehensive testing to ensure your website loads quickly and functions perfectly.</p>
+                </div>
+                <div class="workflow-step">
+                    <div class="step-number">6</div>
+                    <h3>Ongoing Monitoring & Support</h3>
+                    <p>Continuous monitoring, regular updates, and 24/7 support to keep your site running smoothly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="tech-stack">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Technology Stack</h2>
+                <p>Industry-leading platforms and tools for reliable hosting</p>
+            </div>
+            <div class="tech-stack">
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h3>cPanel</h3>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Apache/Nginx</h3>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <i class="fab fa-aws"></i>
+                    </div>
+                    <h3>AWS</h3>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <i class="fab fa-digital-ocean"></i>
+                    </div>
+                    <h3>DigitalOcean</h3>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Cloudflare</h3>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Let's Encrypt SSL</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Clients Say</h2>
+                <p>Trusted by businesses for reliable hosting and exceptional support</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <p class="testimonial-text">"ThinkBright's hosting service has been rock solid for our e-commerce site. The 24/7 monitoring gives us peace of mind, and their support team is incredibly responsive."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SM</div>
+                        <div class="author-info">
+                            <h4>Sarah Mitchell</h4>
+                            <p>CEO, Mitchell Electronics</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"The migration process was seamless, and our website performance improved significantly. Their proactive approach to security and maintenance is exactly what we needed."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JD</div>
+                        <div class="author-info">
+                            <h4>James Davis</h4>
+                            <p>Founder, Davis Consulting</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"Outstanding service! ThinkBright handles all the technical aspects so we can focus on our business. The uptime has been exceptional, and their backup system saved us once."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">LT</div>
+                        <div class="author-info">
+                            <h4>Lisa Thompson</h4>
+                            <p>Marketing Director, Thompson Agency</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Generation Form Section -->
+    <section id="quote-form">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get Your Hosting Plan Started</h2>
+                <p>Tell us about your website needs. We'll tailor a hosting and support solution for you.</p>
+            </div>
+            <div class="form-container">
+                <div id="success-message" class="success-message">
+                    <i class="fas fa-check-circle"></i> Thank you! We've received your hosting quote request and will contact you within 24 hours.
+                </div>
+                <form id="hosting-form">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="website">Website URL (Optional)</label>
+                        <input type="url" id="website" name="website" placeholder="https://yourwebsite.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="website-type">Type of Website *</label>
+                        <select id="website-type" name="website-type" required>
+                            <option value="">Select website type</option>
+                            <option value="static">Static Website</option>
+                            <option value="cms">CMS (WordPress, Drupal, etc.)</option>
+                            <option value="ecommerce">E-commerce</option>
+                            <option value="webapp">Custom Web Application</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="support-requirements">Support Requirements</label>
+                        <textarea id="support-requirements" name="support-requirements" placeholder="Tell us about your specific hosting and support needs..."></textarea>
+                    </div>
+                    <button type="submit" class="btn">Request Hosting Quote</button>
+                </form>
+            </div>
+        </div>
+    </section>
+         <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-4">
+                        ThinkBright <span style="color: white;">Web Solutions</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Transforming ideas into powerful digital solutions. We help businesses establish a strong online presence 
+                        through innovative website and mobile app development services.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#pricing" class="text-gray-400 hover:text-white transition-colors">Pricing</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-white transition-colors">Portfolio</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Website Development</a></li>
+                        <li><a href="app.html" class="text-gray-400 hover:text-white transition-colors">Mobile Apps</a></li>
+                        <li><a href="e-commerce.html" class="text-gray-400 hover:text-white transition-colors">E-commerce</a></li>
+                        <li><a href="uiux.html" class="text-gray-400 hover:text-white transition-colors">UI/UX Design</a></li>
+                        <li><a href="host.html" class="text-gray-400 hover:text-white transition-colors">Hosting & Support</a></li>
+                        <li><a href="marketing.html" class="text-gray-400 hover:text-white transition-colors">Digital Marketing</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-gray-400">
+                        &copy; 2025 ThinkBright Web Solutions. All rights reserved.
+                    </div>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+            function openForm() {
+              document.getElementById("contactModal").classList.remove("hidden");
+              document.getElementById("contactModal").classList.add("flex");
+            }
+        
+            function closeForm() {
+              document.getElementById("contactModal").classList.remove("flex");
+              document.getElementById("contactModal").classList.add("hidden");
+            }
+          </script>
+    <!-- whatsapp -->
+    <a href="https://wa.me/+917845239889" class="float" target="_blank">
+        <i class="fab fa-whatsapp my-float"></i>
+        </a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
